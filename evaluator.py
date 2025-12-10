@@ -523,6 +523,14 @@ def evaluate(ast, environment):
         if value_status == "exit": return value, "exit"
 
         target_base[target_index] = value
+
+        #modifying identifier for debugging########################################
+
+        watch_var= environment["watch"] #getting the variable from env
+        
+        if watch_var == target.get("value"): #printing details if variable matches env variable
+            print(f"Variable {name} = {value} at position {target['position']} on line {target['line']}")
+       #################################################################################
         return value, None
 
     if ast["tag"] == "return":

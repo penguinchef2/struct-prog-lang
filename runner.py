@@ -10,6 +10,22 @@ from evaluator import evaluate
 
 def main():
     environment = {}
+
+    ident_name = None
+
+    it = 0
+
+    while True: #looping to find watch
+        if it >= len(sys.argv):
+            break
+        if sys.argv[it] == 'watch':
+            ident_name = sys.argv[it+2] #skipping =
+            break
+        it += 1
+
+    environment["watch"] = ident_name # storing id in env to use in evaluator
+    #print(environment)
+
     
     # Check for command line arguments
     if len(sys.argv) > 1:

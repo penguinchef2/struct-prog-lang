@@ -524,11 +524,11 @@ def evaluate(ast, environment):
 
         target_base[target_index] = value
 
-        #modifying identifier for debugging########################################
+    #################modifying identifier for debugging########################################
 
         if environment["watch"] == target.get("value"): #printing details if variable matches env variable
             print(f"Variable {name} = {value} at position {target['position']} on line {target['line']}")
-       #################################################################################
+    ###########################################################################################
         return value, None
 
     if ast["tag"] == "return":

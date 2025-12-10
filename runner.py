@@ -11,6 +11,7 @@ from evaluator import evaluate
 def main():
     environment = {}
 
+#######################################################
     ident_name = None
 
     it = 0
@@ -26,7 +27,7 @@ def main():
     environment["watch"] = ident_name # storing id in env to use in evaluator
     #print(environment)
 
-    
+  ####################################################################  
     # Check for command line arguments
     if len(sys.argv) > 1:
         # Filename provided, read and execute it

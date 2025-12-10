@@ -60,7 +60,7 @@ def parse_simple_expression(tokens):
     token = tokens[0]
 
     if token["tag"] in {"identifier", "boolean", "number", "string"}:
-        return {"tag": token["tag"], "value": token["value"], "position": token["position"], "line": token["line"]}, tokens[1:]
+        return {"tag": token["tag"], "value": token["value"], "position": token["position"], "line": token["line"]}, tokens[1:] #now returning position and line for debug
     
     if token["tag"] == "null":
         return {"tag": "null"}, tokens[1:]
